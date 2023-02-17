@@ -49,4 +49,69 @@ header {
         }
     }
 }
+/****************************
+T A B S
+****************************/
+#tabs {
+    h1 {
+        text-align: center;
+    }
+    .wrapper {
+        width: 60%;
+        margin: auto;
+        background-color: white;
+        border-radius: 10px;
+    @media screen and (max-width: 768px) {
+        display: flex;
+        width: auto;
+    }
 
+        .buttonWrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr
+          }
+          button {
+              letter-spacing: 3px;
+              border: none;
+              padding: 10px;
+              background-color: #bccbe9;
+              color: #232c3d;
+              font-size: 18px;
+              cursor: pointer;
+              transition: 0.5s ease-in;
+              &:hover {
+                background-color: #d5e3ff;
+              }
+              &:active {
+                background-color: white;
+              }
+              &:first-child {
+                border-top-left-radius: 10px;
+              }
+              &:last-child {
+                border-top-right-radius: 10px;
+                @media screen and (max-width: 768px) {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 10px;
+                }
+              }
+            }
+            .active {
+              background-color: white;
+            }
+        }
+        p {
+          text-align: left;
+          padding: 10px;
+        }
+        .content {
+          display: none;
+          padding: 10px 20px;
+        }
+        .content.active {
+          display: block;
+        }
+      }
+}

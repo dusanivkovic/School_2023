@@ -42,4 +42,74 @@ header nav .dropdown-toggle::after {
 header .hero button {
   width: -moz-fit-content;
   width: fit-content;
+}
+
+/****************************
+T A B S
+****************************/
+#tabs h1 {
+  text-align: center;
+}
+#tabs .wrapper {
+  width: 60%;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  #tabs .wrapper {
+    display: flex;
+    width: auto;
+  }
+}
+#tabs .wrapper .buttonWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media screen and (max-width: 768px) {
+  #tabs .wrapper .buttonWrapper {
+    grid-template-columns: 1fr;
+  }
+}
+#tabs .wrapper .buttonWrapper button {
+  letter-spacing: 3px;
+  border: none;
+  padding: 10px;
+  background-color: #bccbe9;
+  color: #232c3d;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s ease-in;
+}
+#tabs .wrapper .buttonWrapper button:hover {
+  background-color: #d5e3ff;
+}
+#tabs .wrapper .buttonWrapper button:active {
+  background-color: white;
+}
+#tabs .wrapper .buttonWrapper button:first-child {
+  border-top-left-radius: 10px;
+}
+#tabs .wrapper .buttonWrapper button:last-child {
+  border-top-right-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  #tabs .wrapper .buttonWrapper button:last-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 10px;
+  }
+}
+#tabs .wrapper .buttonWrapper .active {
+  background-color: white;
+}
+#tabs .wrapper p {
+  text-align: left;
+  padding: 10px;
+}
+#tabs .wrapper .content {
+  display: none;
+  padding: 10px 20px;
+}
+#tabs .wrapper .content.active {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
