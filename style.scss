@@ -17,49 +17,89 @@ R o o t
 G l o b a l
 ****************************/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
     position: relative;
 }
-
+h1, h2 {
+  color: $secondary;
+}
 /****************************
 H e a d e r
 ****************************/
 header {
-    background-image: linear-gradient(to bottom, rgba($primary, 0.3), rgba($secondary, 0.4)),
-    url("./img/pexels-pixabay-301926.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 80vh;
-    nav {
-        background: rgba(255, 255, 255, .4);
-        border-bottom: transparent 1px solid;
-        .dropdown-toggle {
-            &::after {
-                display: none;
-            }
+  background-image: linear-gradient(to bottom, rgba($info, 0.3), rgba($light, 0.4)),
+  url("./img/pexels-pixabay-301926.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  nav {
+    background: rgba(255, 255, 255, .4);
+    border-bottom: transparent 1px solid;
+    .navbar-toggle {
+      border: none;
+      background: transparent !important;
+      &:hover {
+        background: transparent !important;
+      }
+      .icon-bar {
+        display: block;
+        background-color: $primary;
+        height: 2px;
+        margin: 4px 0;
+        width: 22px;
+        transition: all 0.2s;
+      }
+      .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+      }
+      .middle-bar {
+        opacity: 0;
+      }
+      .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+      }
+      &.collapsed {
+        .top-bar {
+          transform: rotate(0);      
         }
-    }
-    .hero {
-        button {
-            width: fit-content;
+        .middle-bar {
+          opacity: 1;
         }
+        .bottom-bar {
+          transform: rotate(0);
+        }
+      }
     }
+    .dropdown-toggle {
+      &::after {
+          display: none;
+      }
+    }
+  }
+  .hero {
+      button {
+          width: fit-content;
+      }
+  }
 }
 /****************************
 T A B S
 ****************************/
 #tabs {
-    h1 {
-        text-align: center;
+    h2 {
+      text-align: center;
     }
     .wrapper {
         width: 60%;
         margin: auto;
-        background-color: white;
+        background-color: $secondary;
+        border-radius: 0 0 10px 10px;
         border-radius: 10px;
     @media screen and (max-width: 768px) {
         display: flex;
@@ -76,41 +116,42 @@ T A B S
               letter-spacing: 3px;
               border: none;
               padding: 10px;
-              background-color: #bccbe9;
-              color: #232c3d;
+              background-color: $info;
+              color: $primary;
               font-size: 18px;
               cursor: pointer;
               transition: 0.5s ease-in;
               &:hover {
-                background-color: #d5e3ff;
+                background-color: $light;
               }
               &:active {
-                background-color: white;
+                background-color: $secondary;
               }
               &:first-child {
-                border-top-left-radius: 10px;
+                border-radius: 10px 0 0;
               }
               &:last-child {
-                border-top-right-radius: 10px;
+                border-radius: 0 10px 0 0;
                 @media screen and (max-width: 768px) {
                     border-top-right-radius: 0;
-                    border-bottom-right-radius: 10px;
+                    border-radius: 0 0 0 10px;
                 }
               }
             }
             .active {
-              background-color: white;
+              background-color: $secondary;
             }
         }
         p {
           text-align: left;
           padding: 10px;
+          color: $light;
         }
         .content {
           display: none;
           padding: 10px 20px;
         }
-        .content.active {
+        .active {
           display: block;
         }
       }
