@@ -4,6 +4,7 @@ const contents = document.querySelectorAll(".content");
 
 tabs.onclick = e => {
   const id = e.target.dataset.id;
+  console.log(id)
   if (id) {
     tabButton.forEach(btn => {
       btn.classList.remove("active");
@@ -15,5 +16,14 @@ tabs.onclick = e => {
     });
     const element = document.getElementById(id);
     element.classList.add("active");
+  }
+}
+
+window.onscroll = e => {
+  const navBar = document.querySelector('nav');
+
+  if (this.scrollY > 100) {
+    console.log('hi')
+    navBar.classList.add()
   }
 }
