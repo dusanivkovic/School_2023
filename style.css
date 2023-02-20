@@ -23,11 +23,22 @@ body {
   position: relative;
 }
 
+h1, h2 {
+  color: #FF0000;
+}
+
+.btn {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  transition: 0.2s linear;
+  padding: 0.6rem 2.4rem;
+  border-radius: 2.1rem;
+}
+
 /****************************
 H e a d e r
 ****************************/
 header {
-  background-image: linear-gradient(to bottom, rgba(247, 107, 138, 0.3), rgba(102, 191, 191, 0.4)), url("./img/pexels-pixabay-301926.jpg");
+  background-image: linear-gradient(to bottom, rgba(205, 255, 255, 0.3), rgba(79, 213, 214, 0.4)), url("./img/pexels-pixabay-301926.jpg");
   background-position: center;
   background-size: cover;
   height: 80vh;
@@ -35,6 +46,49 @@ header {
 header nav {
   background: rgba(255, 255, 255, 0.4);
   border-bottom: transparent 1px solid;
+}
+header nav .navbar-nav {
+  margin: 0 auto;
+}
+header nav .navbar-toggle {
+  border: none;
+  background: transparent !important;
+}
+header nav .navbar-toggle:hover {
+  background: transparent !important;
+}
+header nav .navbar-toggle .icon-bar {
+  display: none;
+  background-color: #400D12;
+  height: 2px;
+  margin: 4px 0;
+  width: 22px;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 768px) {
+  header nav .navbar-toggle .icon-bar {
+    display: block;
+  }
+}
+header nav .navbar-toggle .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+header nav .navbar-toggle .middle-bar {
+  opacity: 0;
+}
+header nav .navbar-toggle .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+header nav .navbar-toggle.collapsed .top-bar {
+  transform: rotate(0);
+}
+header nav .navbar-toggle.collapsed .middle-bar {
+  opacity: 1;
+}
+header nav .navbar-toggle.collapsed .bottom-bar {
+  transform: rotate(0);
 }
 header nav .dropdown-toggle::after {
   display: none;
@@ -47,13 +101,14 @@ header .hero button {
 /****************************
 T A B S
 ****************************/
-#tabs h1 {
+#tabs h2 {
   text-align: center;
 }
 #tabs .wrapper {
   width: 60%;
   margin: auto;
-  background-color: white;
+  background-color: #FF0000;
+  border-radius: 0 0 10px 10px;
   border-radius: 10px;
 }
 @media screen and (max-width: 768px) {
@@ -75,41 +130,59 @@ T A B S
   letter-spacing: 3px;
   border: none;
   padding: 10px;
-  background-color: #bccbe9;
-  color: #232c3d;
+  background-color: #CDFFFF;
+  color: #400D12;
   font-size: 18px;
   cursor: pointer;
   transition: 0.5s ease-in;
 }
 #tabs .wrapper .buttonWrapper button:hover {
-  background-color: #d5e3ff;
+  background-color: #4FD5D6;
 }
 #tabs .wrapper .buttonWrapper button:active {
-  background-color: white;
+  background-color: #FF0000;
 }
 #tabs .wrapper .buttonWrapper button:first-child {
-  border-top-left-radius: 10px;
+  border-radius: 10px 0 0;
 }
 #tabs .wrapper .buttonWrapper button:last-child {
-  border-top-right-radius: 10px;
+  border-radius: 0 10px 0 0;
 }
 @media screen and (max-width: 768px) {
   #tabs .wrapper .buttonWrapper button:last-child {
     border-top-right-radius: 0;
-    border-bottom-right-radius: 10px;
+    border-radius: 0 0 0 10px;
   }
 }
 #tabs .wrapper .buttonWrapper .active {
-  background-color: white;
+  background-color: #FF0000;
 }
 #tabs .wrapper p {
   text-align: left;
   padding: 10px;
+  color: #4FD5D6;
 }
 #tabs .wrapper .content {
   display: none;
   padding: 10px 20px;
 }
-#tabs .wrapper .content.active {
+#tabs .wrapper .active {
   display: block;
+}
+
+/****************************
+N E W S
+****************************/
+.last-news > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.last-news > div .card {
+  flex: 0 0 32%;
+}
+@media screen and (max-width: 768px) {
+  .last-news > div .card {
+    flex: 0 0 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
