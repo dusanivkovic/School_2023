@@ -172,6 +172,9 @@ T A B S
       padding: 10px;
       color: $light;
     }
+    i {
+      display: block;
+    }
     .content {
       display: none;
       padding: 10px 20px;
@@ -196,3 +199,22 @@ N E W S
     }
   }
 }
+/****************************
+P R O J E C T
+****************************/
+.project {
+  .card {
+    height: calc(100% - 1.6em);
+  }
+}
+/****************************
+S L I D E R
+****************************/
+
+
+
+
+
+
+
+
