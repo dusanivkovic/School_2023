@@ -21,9 +21,12 @@ tabs.onclick = e => {
 
 window.onscroll = e => {
   const navBar = document.querySelector('nav');
-
-  if (this.scrollY > 100) {
-    console.log('hi')
-    navBar.classList.add()
+  const distanceFromTop = Math.abs(
+    document.body.getBoundingClientRect().top
+  );
+  console.log(navBar)
+  if (distanceFromTop > 100) {
+    // navBar.style.position = 'absolute';
+    navBar.classList.add('fixed-top');
   }
 }
