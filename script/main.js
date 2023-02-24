@@ -24,9 +24,28 @@ window.onscroll = e => {
   const distanceFromTop = Math.abs(
     document.body.getBoundingClientRect().top
   );
-  console.log(navBar)
-  if (distanceFromTop > 100) {
-    // navBar.style.position = 'absolute';
-    navBar.classList.add('fixed-top');
+  const vH = window.innerHeight;
+  console.log(vH, distanceFromTop, this.scrollY)
+  if (distanceFromTop > 40) {
+    navBar.classList.add('navbar-scroll');
+  }else {
+    navBar.classList.remove('navbar-scroll');
+  }
+  // if (distanceFromTop > vH) {
+  //   navBar.classList.add('fixed-top');
+  // }else {
+  //   navBar.classList.remove('fixed-top');
+  // }
+}
+const heroHeading = 'Lorem ipsum dolor sit amet.';
+const h1 = document.querySelector('h1');
+let i = 0;
+const typingHeding = () => {
+  if (i < heroHeading.length) {
+    h1.innerHTML += heroHeading[i]
+    i++;
+    setTimeout(typingHeding, 100);
   }
 }
+typingHeding();
+
