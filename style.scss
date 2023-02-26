@@ -197,6 +197,50 @@ T A B S
   }
 }
 /****************************
+C O U N T E R
+****************************/
+.counter-up {
+  background-image: linear-gradient(to bottom, rgba($info, 0.3), rgba($light, 0.4)),
+  url("./img/pexels-pixabay-301926.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .counter-show {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    div {
+      flex: 0 0 30%;
+      @media screen and (max-width: 768px) {
+        flex: 0 0 100%;
+      }
+      .counter-num {
+        margin: 1em 0;
+        border-radius: 50px;
+        background-color: $primary;
+        padding: 4em 1em;
+        text-align: center;
+        color: $light;
+        p {
+          font-size: 1.6rem;
+        }
+        &:hover {
+          transform: scale(1.1);   
+          background-color: $secondary;   
+          transition-duration: 2s;   
+          color: $info;   
+        }
+      }
+    }
+  }
+  span {
+    font-size: 1rem;
+    border: $secondary 5px solid;
+    border-radius: 50%;
+    padding: 4em;
+  }
+}
+/****************************
 N E W S
 ****************************/
 .last-news >div{

@@ -48,4 +48,23 @@ const typingHeding = () => {
   }
 }
 typingHeding();
+// const counterDiv = document.querySelectorAll('.block');
+// let j = 0;
+// let counter = [];
+// const count = (c) => {
+//   if (j <= c) {
+//     console.log(j)
+//     document.querySelector('.block').querySelector('h3').innerText = j;
+//     j++;
+//     setTimeout(count(c), 1000)
+//   }
+// }
+// counterDiv.forEach( item => {
+//   counter.push(item.querySelector('h3').innerText)
+//   // count(parseInt(item.querySelector('h3').innerText));
+// })
+// console.log(counter)
 
+// // count(parseInt(counter[0]));
+// count(parseInt(counter[1]));
+// // count(parseInt(counter[2]));
