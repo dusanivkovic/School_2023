@@ -57,21 +57,58 @@ $('.counter').addClass('animated fadeInDownBig');
 $('h3').addClass('animated fadeIn');
 //Owl Carousel
 $(document).ready(function(){
-  $(".owl-carousel").owlCarousel();
+  var Lowl=$("#owl-demo");
+  Lowl.owlCarousel({
+      items: 4, //10 items above 1000px browser width
+      itemsDesktop: [1000, 2], //5 items between 1000px and 901px
+      itemsDesktopSmall: [991, 2], // 3 items betweem 900px and 601px
+      itemsTablet: [600, 2], //2 items between 600 and 0;
+      //  itemsMobile : false , // itemsMobile disabled - inherit from itemsTablet option
+      dots: false, 
+      stagePadding: Number, //stagePadding: 50,
+      loop: false, 
+      margin: 30, 
+      rtl: true, 
+      pagination: false,
+      nav: true,
+      navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+      responsive:{
+        0:{
+            items:2
+        },
+        576:{
+            items:3
+        },
+        992:{
+            items:4
+        }
+    }
+  })
+ 
+  $(".next").click(function () {
+      Lowl.trigger('owl.next');
+  });
+ 
+  $(".prev").click(function () {
+      Lowl.trigger('owl.prev');
+  });
+  
+  Lowl.trigger('owl.play', false);
+  $('.owl-one').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        576:{
+            items:2
+        },
+        992:{
+            items:3
+        }
+    }
+  })
 });
-$('.owl-carousel').owlCarousel({
-  loop:true,
-  margin:10,
-  nav:true,
-  responsive:{
-      0:{
-          items:1
-      },
-      600:{
-          items:2
-      },
-      1000:{
-          items:3
-      }
-  }
-})
+
