@@ -266,40 +266,7 @@ P R O J E C T
 /****************************
 S L I D E R
 ****************************/
-#owl-one {
-  .item {
-    .img-box {
-      padding: 10px;
-    }
-    img {
-      width: 100%;
-    }
-  }
-  .customNavigation {
-    a {
-      position: absolute;
-      height: 40px;
-      width: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
-      border-radius: 50%;
-      opacity: 1;
-      margin-top: auto;
-      margin-bottom: auto;
-      box-shadow: -2px 1px 10px #bdbdbd;
-      top: calc(88% - 20px);
-      cursor: pointer;
-    }
-    .prev {
-      left: -15px;
-    }
-    .next {
-      right: -15px;
-    }
-  } 
-}
+// 
 
 /****************************
 F O O T E R

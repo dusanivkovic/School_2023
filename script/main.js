@@ -72,6 +72,9 @@ $(document).ready(function(){
       pagination: false,
       nav: true,
       navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+      autoplay:true,
+      autoplayTimeout:1000,
+      autoplayHoverPause:true,
       responsive:{
         0:{
             items:2
