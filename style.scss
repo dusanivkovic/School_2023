@@ -39,7 +39,9 @@ h1, h2 {
   padding: 0.1em 1em;
   border-radius: 2.1rem;
 }
-
+img {
+  width: 100%;
+}
 /****************************
 H e a d e r
 ****************************/
@@ -129,12 +131,13 @@ header {
 T A B S
 ****************************/
 #tabs {
+  margin-top: -4.5em;
     h2 {
       text-align: center;
     }
     .wrapper {
-        width: 60%;
-        margin: auto;
+        // width: 60%;
+        margin:auto;
         background-color: $secondary;
         border-radius: 0 0 10px 10px;
         border-radius: 10px;
@@ -283,6 +286,43 @@ footer {
   }
   i {
     margin-right: .5em;
+  }
+}
+/****************************
+S I N G L E  N E W S
+****************************/
+.single {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .news {
+    h3 {
+      text-transform: uppercase;
+    }
+    .blog-item-content {
+      margin: .4em 0;
+      text-transform: uppercase;
+      span {
+        i {
+          margin-right: .2em;
+        }
+        margin-right: .6em;
+      }
+    }
+  }
+  aside {
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        border-bottom: 1px solid $primary;
+        line-height: 2.5;
+      }
+      a {
+        text-decoration: none;
+        font-weight: 500;
+      }
+    }
   }
 }
 
