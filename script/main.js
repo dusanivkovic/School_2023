@@ -1,8 +1,24 @@
+// AOS.init();
 const tabs = document.querySelector(".wrapper");
 const tabButton = document.querySelectorAll(".tab-button");
 const contents = document.querySelectorAll(".content");
 
+tabs.onclick = e => {
+  const id = e.target.dataset.id;
+  // console.log(id)
+  if (id) {
+    tabButton.forEach(btn => {
+      btn.classList.remove("active");
+    });
+    e.target.classList.add("active");
 
+    contents.forEach(content => {
+      content.classList.remove("active");
+    });
+    const element = document.getElementById(id);
+    element.classList.add("active");
+  }
+}
 
 window.onscroll = e => {
   const navBar = document.querySelector('nav');
@@ -15,23 +31,22 @@ window.onscroll = e => {
   }else {
     navBar.classList.remove('navbar-scroll');
   }
-  // if (distanceFromTop > vH) {
-  //   navBar.classList.add('fixed-top');
-  // }else {
-  //   navBar.classList.remove('fixed-top');
-  // }
 }
+
 const heroHeading = 'Lorem ipsum dolor sit amet.';
-const h1 = document.querySelector('h1');
-let i = 0;
-const typingHeding = () => {
+var h1 = $('h1');
+var i = 0;
+function typingHeding() {
   if (i < heroHeading.length) {
-    h1.innerHTML += heroHeading[i]
+    console.log(heroHeading[i]);
+    h1.append(heroHeading[i]);
     i++;
-    setTimeout(typingHeding, 100);
+    setTimeout(typingHeding, 200);
   }
-}
-typingHeding();
+};
+
+$(typingHeding);
+
 //Counter
 $('.counter').counterUp({
   delay: 10,
@@ -79,8 +94,8 @@ $(document).ready(function(){
   $(".prev").click(function () {
       Lowl.trigger('owl.prev');
   });
-  
   Lowl.trigger('owl.play', false);
+  
   $('.owl-one').owlCarousel({
     loop:true,
     margin:10,
@@ -98,20 +113,4 @@ $(document).ready(function(){
     }
   })
 });
-
-tabs.onclick = e => {
-  const id = e.target.dataset.id;
-  console.log(id)
-  if (id) {
-    tabButton.forEach(btn => {
-      btn.classList.remove("active");
-    });
-    e.target.classList.add("active");
-
-    contents.forEach(content => {
-      content.classList.remove("active");
-    });
-    const element = document.getElementById(id);
-    element.classList.add("active");
-  }
-}
+AOS.init();

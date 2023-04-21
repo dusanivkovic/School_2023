@@ -1,22 +1,15 @@
 <?php include "partials/header.php"?>
 
 <!-- Tabs -->
-<section class="container-fluid"id="tabs">
-  <h2>TOGGLE TABS</h2>
+<section class="container-fluid" id="tabs">
   <div class="wrapper">
+    <h2 class="py-2">Elektronski dnevnik</h2>
     <div class="buttonWrapper">
-      <button class="tab-button active" data-id="home">Home<i class="fas fa-user-graduate"></i></button>
-      <button class="tab-button" data-id="about">About<i class="fas fa-chalkboard-teacher"></i></button>
-      <button class="tab-button" data-id="contact">Contact<i class="fas fa-user-friends"></i></button>
+      <article class="tab-button active" data-id="home"><p>Home</p><i class="fas fa-user-graduate"></i></article>
+      <article class="tab-button" data-id="about"><p>Home</p><i class="fas fa-chalkboard-teacher"></i></article>
+      <article class="tab-button" data-id="contact"><p>Home</p><i class="fas fa-user-friends"></i></article>
     </div>
-    <div class="contentWrapper">
-      <p class="content active" id="home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus vitae pariatur ad inventore repudiandae minus omnis. Repudiandae cumque iusto enim perspiciatis fugiat? Assumenda, rerum nulla!
-      </p>
-      <p class="content" id="about">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos amet suscipit quos nisi perferendis optio vitae sint asperiores consectetur eum?
-      </p>
-      <p class="content" id="contact">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nisi earum nemo rem debitis voluptatum!
-      </p>
-    </div>
+
   </div>
   <p></p>
 </section>
@@ -24,7 +17,7 @@
   <!-- C O U N T E R -->
   <section class="counter-up">
     <div id="inview-example" class="counter-show container-fluid">
-      <div class="common-box">
+      <div class="common-box aos-init" data-aos="fade-up">
         <div class="counter-num">  
           <!-- Add user icon to the counter -->  
           <p><i class="fa fa-user"></i></p>
@@ -33,7 +26,7 @@
           <p> Projects </p>   
         </div>    
       </div>
-      <div class="common-box">
+      <div class="common-box aos-init" data-aos="fade-up">
         <div class="counter-num">  
           <!-- Add user icon to the counter -->  
           <p><i class="fa fa-user"></i></p>
@@ -42,7 +35,7 @@
           <p> Projects </p>   
         </div>    
       </div>
-      <div class="common-box">
+      <div class="common-box aos-init" data-aos="fade-up">
         <div class="counter-num">  
           <!-- Add user icon to the counter -->  
           <p><i class="fa fa-user"></i></p>
@@ -106,7 +99,7 @@
     <div class="container-fluid py-5">
         <div class="wrapper">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-5 col-lg-3">
+                <div class="col-12 col-md-5 col-lg-3 aos-init" data-aos="fade-up">
                     <div class="card card-1 bg-light">
                         <div class="card-body">
                             
@@ -117,7 +110,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-5 col-lg-3">
+                <div class="col-12 col-md-5 col-lg-3 aos-init" data-aos="fade-up">
                     <div class="card card-2 bg-info">
                         <div class="card-body">
                             
@@ -128,7 +121,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-5 col-lg-3">
+                <div class="col-12 col-md-5 col-lg-3 aos-init" data-aos="fade-up">
                     <div class="card card-3 bg-success">
                         <div class="card-body">
                             
@@ -139,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-5 col-lg-3">
+                <div class="col-12 col-md-5 col-lg-3 aos-init" data-aos="fade-up">
                     <div class="card card-4 bg-warning">
                         <div class="card-body">
                             
