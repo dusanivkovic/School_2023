@@ -77,7 +77,7 @@
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
         <div class="card-body">
-          <a class="justify-content-center btn btn-secondary display-4">ENROLL NOW</a>
+          <a class="justify-content-center btn btn-secondary display-4" href="news-single.php">ENROLL NOW</a>
         </div>
       </div>
       <div class="card item">
@@ -91,7 +91,6 @@
         </div>
       </div>
     </div>
-    <!-- ./last-news -->
   </section>
     <!-- last-news -->
   <!-- P R O J E C T -->

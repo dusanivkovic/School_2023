@@ -56,22 +56,23 @@
       </div>
     </nav>
     <div class="hero">
-        <div class="px-3 py-5 p-lg-5">
-            <div class="row">
-                <div class="col-md-6 col-12">
-                    <h1 class="display-1"></h1>
-                </div>
-                <div class="col-md-6 col-12 d-flex align-items-end">
-                  <strong class="display-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, sint!</strong><br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                </div>
-                <div class="col-6">
-                  <a class="btn btn-outline-primary my-2 display-4">Saznaj vise</a>
-                </div>
-            </div>
+      <div class="px-3 py-5 p-lg-5">
+        <div class="row align-items-end">
+          <div class="col-md-6 col-12">
+              <h1 class="display-1"></h1>
+          </div>
+          <div class="col-md-6 col-12 d-flex align-items-end">
+            <strong class="display-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, sint!</strong><br>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-6">
+          </div>
+          <div class="col-6">
+            <a class="btn btn-outline-primary my-2 display-4">Saznaj vise</a>
+          </div>
+        </div>
+        </div>
+      </div>
     </div>
   </header>
