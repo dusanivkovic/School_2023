@@ -1,151 +1,31 @@
-<?php include "partials/header.php"?>
-
-<!-- Tabs -->
-<section class="container-fluid" id="tabs">
-  <div class="wrapper">
-    <h2 class="py-2">Elektronski dnevnik</h2>
-    <div class="buttonWrapper">
-      <article class="tab-button active" data-id="home"><p>Home</p><i class="fas fa-user-graduate"></i></article>
-      <article class="tab-button" data-id="about"><p>Home</p><i class="fas fa-chalkboard-teacher"></i></article>
-      <article class="tab-button" data-id="contact"><p>Home</p><i class="fas fa-user-friends"></i></article>
-    </div>
-
-  </div>
-  <p></p>
+<?php get_header(); ?>
+<section class="container-fluid blog py-5">
+    <main class="col-lg-8">
+        <div class="row px-4">
+            <?php if(have_posts()): while(have_posts()): the_post(); ?>
+            <article class="row align-items-center col-sm-6 news px-md-5 mx-auto">
+                <div class="blog-item-content text-primary col-md-7 my-auto py-1">
+                    <h4><a href="<?php the_permalink(); ?>" class="title-link"><?php the_title(); ?></a></h4>
+                    <span><i class="fas fa-clock"></i><?php echo get_the_date(); ?></span>
+                </div>
+                <div class="col-md-5 py-1">
+                    <?php the_post_thumbnail(); ?>
+                </div>
+            </article>
+            <?php endwhile; ?>
+            <?php the_posts_pagination( array(
+                        'mid_size' => 1,
+                        'prev_text' => __( '<<', 'textdomain' ),
+                        'next_text' => __( '>>', 'textdomain' ),
+                    ) ); ?>
+            <?php else: ?>
+                <?php _e('nothing to show'); ?>
+            <?php endif; ?>
+        </div>
+    </main>
+    <aside class="col-lg-4 mx-auto">
+        <?php get_sidebar(); ?>
+    </aside>
 </section>
-      <!-- ./Tabs -->
-  <!-- C O U N T E R -->
-  <section class="counter-up">
-    <div id="inview-example" class="counter-show container-fluid">
-      <div class="common-box aos-init" data-aos="fade-up">
-        <div class="counter-num">  
-          <!-- Add user icon to the counter -->  
-          <p><i class="fa fa-user"></i></p>
-          <span class="counter" data-count="9">78</span>
-					<!-- <span>+</span>      -->
-          <p> Projects </p>   
-        </div>    
-      </div>
-      <div class="common-box aos-init" data-aos="fade-up">
-        <div class="counter-num">  
-          <!-- Add user icon to the counter -->  
-          <p><i class="fa fa-user"></i></p>
-          <span class="counter" data-count="9">100</span>
-					<!-- <span>+</span>      -->
-          <p> Projects </p>   
-        </div>    
-      </div>
-      <div class="common-box aos-init" data-aos="fade-up">
-        <div class="counter-num">  
-          <!-- Add user icon to the counter -->  
-          <p><i class="fa fa-user"></i></p>
-          <span class="counter" data-count="9">90</span>
-					<!-- <span>+</span>      -->
-          <p> Projects </p>   
-        </div>    
-      </div>
-    </div>
-  </section>
-  <!-- ./C O U N T E R -->
-    <!-- last-news -->
-  <section class="last-news container-fluid">
-    <div class="py-5 owl-one owl-carousel owl-theme">
-      <div class="card item">
-        <img src="./img/class1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <div class="card-body">
-          <a class="justify-content-center btn btn-secondary display-4">ENROLL NOW</a>
-        </div>
-      </div>
-      <div class="card item">
-        <img src="./img/class1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <div class="card-body">
-          <a class="justify-content-center btn btn-secondary display-4">ENROLL NOW</a>
-        </div>
-      </div>
-      <div class="card item">
-        <img src="./img/class1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <div class="card-body">
-          <a class="justify-content-center btn btn-secondary display-4" href="news-single.php">ENROLL NOW</a>
-        </div>
-      </div>
-      <div class="card item">
-        <img src="./img/class1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <div class="card-body">
-          <a class="justify-content-center btn btn-secondary display-4">ENROLL NOW</a>
-        </div>
-      </div>
-    </div>
-  </section>
-    <!-- last-news -->
-  <!-- P R O J E C T -->
-  <section class="bg-primary project">
-    <div class="container-fluid py-5">
-        <div class="wrapper">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-5 col-lg-3 aos-init" data-aos="fade-up">
-                    <div class="card card-1 bg-light">
-                        <div class="card-body">
-                            
-                            <h3 class="mbr-section-subtitle mbr-fonts-style mb-2 display-5"><strong>GREAT TEACHERS</strong></h3>
-                            <p class="mbr-text mbr-fonts-style display-7">
-                                Rewarding task of instructing young children between the ages of 5 and 6 years old
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-5 col-lg-3 aos-init" data-aos="fade-up">
-                    <div class="card card-2 bg-info">
-                        <div class="card-body">
-                            
-                            <h3 class="mbr-section-subtitle mbr-fonts-style mb-2 display-5"><strong>DELICIOUS MEALS</strong></h3>
-                            <p class="mbr-text mbr-fonts-style display-7">
-                                Healthy meals with balanced nutrition and suitable for each children.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-5 col-lg-3 aos-init" data-aos="fade-up">
-                    <div class="card card-3 bg-success">
-                        <div class="card-body">
-                            
-                            <h3 class="mbr-section-subtitle mbr-fonts-style mb-2 display-5"><strong>EXCELLENT PROGRAMMES</strong></h3>
-                            <p class="mbr-text mbr-fonts-style display-7">
-                                The stories, games, quizzes, and worksheets given here are great ways for lesson.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-5 col-lg-3 aos-init" data-aos="fade-up">
-                    <div class="card card-4 bg-warning">
-                        <div class="card-body">
-                            
-                            <h3 class="mbr-section-subtitle mbr-fonts-style mb-2 display-5"><strong>SATISFIED PARENTS</strong></h3>
-                            <p class="mbr-text mbr-fonts-style display-7">
-                                Parents are more satisfied with our service and teacher when they choose us.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  </section>
-<!-- ./P R O J E C T -->
 
-<?php include "partials/footer.php"?>
+<?php get_footer(); ?>
